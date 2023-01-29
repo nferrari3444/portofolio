@@ -38,7 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'jobs',
+    'storages',
 ]
+
+AWS_STORAGE_BUCKET_NAME= 'nicolasportfolioimages'
+AWS_S3_REGION_NAME = 'us-east-1'
+AWS_ACCESS_KEY_ID = 'AKIAZ2VRG6CPSFL2PUPS'
+AWS_SECRET_ACCESS_KEY= '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'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_DEFAULT_ACL= None
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
