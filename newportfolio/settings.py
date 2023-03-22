@@ -96,10 +96,10 @@ WSGI_APPLICATION = 'newportfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':  'django.db.backends.postgresql' ,#  'django.db.backends.sqlite3',
-        'NAME':  'djbdcgjkh1rrn',
-        'USER': 'aldncicqwpxqgu',
-        'PASSWORD': 'd1cb94e159bfc90e5da440e89d8e57977057d13f95b5a7a6c0313340e0b04321',
-        'HOST': 'ec2-34-197-84-74.compute-1.amazonaws.com',
+        'NAME':  'd24407gl8vc1p',
+        'USER': 'fxghheerrxxykk',
+        'PASSWORD': 'aba8fa79001bec9f17a6d83458e9cf2b5be73b6005d2a89348de59e1d8c22200',
+        'HOST': 'ec2-54-225-234-165.compute-1.amazonaws.com',
         'PORT': '5432'                                           #BASE_DIR / 'db.sqlite3',
     }
 }
