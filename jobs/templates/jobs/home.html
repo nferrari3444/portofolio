@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
     <!-- <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico"> -->
-
     <title>Nicolas Ferrari Website</title>
 
     
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'myfirstcss.css' %}">
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -23,12 +25,63 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #addeda;">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="#">Nicolas Ferrari Website</a>
+      
+      <!-- <span class="navbar-text mx-2 px-2"> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+          <ul class="navbar-nav me-auto px-3">
+          
+          <li class="nav-item px-4">
+          <a class="nav-link active" aria-current="page" href="#">About</a>
+        </li>
+          <!-- </span> -->
+          <!-- <span class="navbar-text"> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer-section">Contact</a>
+          </li>
 
+        </ul>
+        </div>
+      </div>
+    
+
+    </nav>
    
     <main role="main">
 
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-12">
+          <h2 class="text-center">Technologies</h2>
+          <p class="text-muted text-center letter">Programming Languages:</p>
+          <ul>
+            <img src="{% static 'pythonlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+            <img src="{% static 'nodejslogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+            <img src="{% static 'javascriptlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2 mb-2"></img>
+            <img src="{% static 'reactlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+            <img src="{% static 'htmllogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+            <img src="{% static 'csslogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+            <img src="{% static 'reduxlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          </ul>
+          <p class="text-muted text-center letter">Databases:</p>
+          <ul>
+            <img src="{% static 'mongodblogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+            <img src="{% static 'mysqllogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+            <img src="{% static 'postgresql.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2 mb-2"></img>
+            <img src="{% static 'sqlserverlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          </ul>
+
+        </div>
+        <div class="col-lg-9 col-md-9 col-12">
       <section class="jumbotron text-center">
-        <div class="container">
+        <!-- <div class="container"> -->
           <h1 class="jumbotron-heading">Nicolas Ferrari</h1>
           <p class="lead text-muted">Hi, my name is Nicolas, I have been working as a developer for 5 years ago. 
           The main technologies that I manage are Python, Node.js, React , Javascript, HTML, CSS. I have very good
@@ -37,23 +90,25 @@
           Beyond my work I enjoy making apps and websites by my own. I also enjoy playing basketball and sports activities.</p>
           <p>
             <a href="mailto:nferrari3444@gmail.com" class="btn btn-primary my-2">Email Me</a>
-            <a href="https://github.com/nferrari3444" class="btn btn-secondary my-2">Github </a>
+            <a href="https://github.com/nferrari3444" target="_blank" class="btn btn-secondary my-2">Github </a>
           </p>
           <img src="{% static 'carnet.jpg' %}" height=300></img>
-        </div>
+        <!-- </div> -->
       </section>
+    </div>
+    </div>
 
-      <div class="album py-5 bg-light">
-        <div class="container">
+      <div id='projects' class="album py-5 bg-light">
+        <div class="container"> 
 
-          <div class="row">
+          <div class="row row-cols-12">
             
             {% for job in jobs.all %}  
 
                  
 
             <div class="col-md-4">
-              <a href="{% url 'detail' job.id %}">
+              <a href="{% url 'detail' job.id %}" target="_blank">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="{{ job.image.url }}">
                 <div class="card-body">
@@ -64,7 +119,7 @@
                 </a>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a href = "{{ job.link }}"> <button type="button" class="btn btn-sm btn-outline-secondary">Go To Site</button></a>
+                      <a href = "{{ job.link }}"  target="_blank"> <button type="button" class="btn btn-sm btn-outline-secondary">Go To Site</button></a>
                       
                     </div>
                     
@@ -80,13 +135,35 @@
 
     </main>
 
-   
+    <!-- "footer bg-info d-flex justify-content-between" -->
+<footer id = "footer-section" class="bg-info d-flex g-0 justify-content-around align-items-center">
+  <!-- <div class="d-flex justify-content-evenly"> -->
 
+<i class="fa-sharp fa-solid fa-location-dot fa-xl"><span class="icon-text">Location: Uruguay</span></i>
+
+
+<a href="https://www.linkedin.com/in/nicolas-ferrari-81620434/">
+<i class="fab fa-linkedin fa-xl"><span class="icon-text">Linkedin &nbsp; Profile</span></i>
+
+ </a>
+
+
+<i class="fa-sharp fa-solid fa-envelope fa-xl"><span class="icon-text">nferrari3444@gmail.com</span></i>
+
+
+<a href="https://github.com/nferrari3444"><i class="fa-brands fa-github fa-xl"><span class="icon-text">Github &nbsp; Profile</span></i></a>
+
+<!-- <p class="fa-sharp fa-solid fa-envelope" style="font-size:30px; color: #36511f"></p> -->
+
+
+<!-- </div> -->
+</footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
     <script src="{% static 'jquery-3.6.3.min.js' %}" ></script>
+ 
     <script src="{% static 'popper.min.js' %}" ></script> 
     <script src="{% static 'js/bootstrap.min.js' %}" ></script>
 

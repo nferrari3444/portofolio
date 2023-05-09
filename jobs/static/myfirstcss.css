@@ -1,0 +1,55 @@
+/* @import url('https://fonts.googleapis.com/css?family=Comic-Sans-MS'); */
+
+/* img {
+
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
+
+
+nav .navbar-nav li a {
+    color: white !important;
+    font-size: 1.5rem;
+}
+
+
+
+
+footer {
+    height: 50px;
+    width: 100%;
+}
+
+.icon-position {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.icon-text {
+    font-size: 10px;
+    color:white;
+    display: inline;
+    width:100%;
+     margin-left: 1rem;  
+    vertical-align: middle; 
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+.fa-linkedin .fa-envelope {
+    font-size: 80px;
+}
+/* .ddd {
+    font-size:30px;
+     vertical-align:middle;
+} */
+
+/* .footer a i {
+    text-decoration: none;
+    color: inherit;
+} */
+
+/* a {
+    color: inherit;
+} */
