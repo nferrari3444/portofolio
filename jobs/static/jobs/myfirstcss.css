@@ -7,11 +7,11 @@ nav .navbar-nav li a {
     color: white !important;
     font-size: 1.5rem;
 }
-img {
+/* img {
 
     width: 100px;
     height: 100px;
-}
+} */
 
 .container {
 
@@ -27,7 +27,11 @@ i {
     color: violet;
 }
 
-
+.letter {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 3rem;
+}
 /* footer a i {
     margin-right: 10px;
    

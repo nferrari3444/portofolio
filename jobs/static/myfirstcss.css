@@ -13,7 +13,9 @@ nav .navbar-nav li a {
     font-size: 1.5rem;
 }
 
-
+nav .navbar-nav li a:hover {
+    background-color: greenyellow;
+}
 
 
 footer {
@@ -25,8 +27,30 @@ footer {
     margin-right: 1rem;
     margin-left: 1rem;
 }
+
+.font-type {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color:darkslategrey
+}
+
+
+.img-size {
+    width: 400px;
+    height: 300px;
+}
+
+.navbar-brand {
+    font-family: "MS Gothic";
+    font-size: 2rem;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    color: darkblue;
+}
+
 .icon-text {
-    font-size: 10px;
+    font-size: 0.8rem;
     color:white;
     display: inline;
     width:100%;
@@ -39,6 +63,15 @@ footer {
 
 .fa-linkedin .fa-envelope {
     font-size: 80px;
+    color: blue;
+    fill:blue;
+}
+
+
+.letter {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 /* .ddd {
     font-size:30px;
