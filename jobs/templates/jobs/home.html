@@ -87,29 +87,29 @@
         
         <p class="text-muted text-center">Programming Languages:</p>
         <ul>
-          <img src="{% static 'pythonlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
-          <img src="{% static 'nodejslogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
-          <img src="{% static 'javascriptlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2 mb-2"></img>
-          <img src="{% static 'reactlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
-          <img src="{% static 'htmllogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
-          <img src="{% static 'csslogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
-          <img src="{% static 'reduxlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'pythonlogo.png' %}" style="width:15%" class="img-responsive rounded mr-2"></img>
+          <img src="{% static 'nodejslogo.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'javascriptlogo.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2 mb-2"></img>
+          <img src="{% static 'reactlogo.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'htmllogo.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'csslogo.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'reduxlogo.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
         </ul>
       </div>
       <div class="col-lg-4 col-md-9 col-12">
         <p class="text-muted text-center letter">Databases:</p>
         <ul>
-          <img src="{% static 'mongodblogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
-          <img src="{% static 'mysqllogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
-          <img src="{% static 'postgresql.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2 mb-2"></img>
-          <img src="{% static 'sqlserverlogo.png' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'mongodblogo.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'mysqllogo.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'postgresql.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2 mb-2"></img>
+          <img src="{% static 'sqlserverlogo.png' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
         </ul>
       </div>
       <div class="col-lg-4 col-md-9 col-12">
         <p class="text-muted text-center letter">Cloud Technologies:</p>
         <ul>
-          <img src="{% static 'AWS.jpg' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
-          <img src="{% static 'Google-cloud-logo.jpg' %}" style="width:20%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'AWS.jpg' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
+          <img src="{% static 'Google-cloud-logo.jpg' %}" style="width:15%" class="img-thumbnail img-responsive rounded mr-2"></img>
        
         </ul>
 
@@ -128,22 +128,25 @@
                  
 
             <div class="col-md-4">
+              <div class="box-shadow">
               <a href="{% url 'detail' job.id %}" target="_blank">
-              <div class="card mb-4 box-shadow">
+              <div class="card mb-4">
                 <img class="card-img-top" src="{{ job.image.url }}">
                 <div class="card-body">
                   <h5 class="card-title">{{ job.title }}</h5>
                   <p class="card-text">{{ job.summary }}</p>
                 </div>
               </div>
+            
                 </a>
+              </div>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href = "{{ job.link }}"  target="_blank"> <button type="button" class="btn btn-sm btn-outline-secondary">Go To Site</button></a>
-                      
+                    </div>
                     </div>
                     
-                  </div>
+                  
                 
            
             </div>
