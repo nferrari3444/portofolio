@@ -4,7 +4,7 @@ from newportfolio.settings.base import *
 DEBUG= False
 env= os.environ.copy()
 
-SECRET_KEY=env['SECRET_KEY']
+# SECRET_KEY=env['SECRET_KEY']
 
 try:
     from newportfolio.settings.local import *
