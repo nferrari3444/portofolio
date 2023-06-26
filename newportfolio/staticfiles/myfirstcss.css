@@ -7,6 +7,14 @@
   height: auto;
 } */
 
+/* section.jumbotron {
+    margin-bottom: 0rem;
+} */
+
+.text-center {
+    margin-bottom: 0rem;
+}
+
 
 nav .navbar-nav li a {
     color: white !important;

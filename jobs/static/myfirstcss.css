@@ -82,7 +82,9 @@ footer {
     }
 
 
-
+.text-center {
+        margin-bottom: 0rem;
+}
 
 @media only screen and (max-width: 900px) {
     .icon-text {
