@@ -1,5 +1,9 @@
 from pathlib import Path
 import os
+import psycopg2
+from dotenv import load_dotenv
+
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -11,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ay=+-9snlncdc33(i_eg*gad^ysr5uz&*=o7x8_!6(as46(!ko'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['pure-sea-18356.herokuapp.com', 'nicolasferrariporfolio.herokuapp.com', 'localhost','127.0.0.1']
 
@@ -84,11 +88,11 @@ WSGI_APPLICATION = 'newportfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':  'django.db.backends.postgresql' ,#  'django.db.backends.sqlite3',
-        'NAME':  'd24407gl8vc1p',
-        'USER': 'fxghheerrxxykk',
-        'PASSWORD': 'aba8fa79001bec9f17a6d83458e9cf2b5be73b6005d2a89348de59e1d8c22200',
-        'HOST': 'ec2-54-225-234-165.compute-1.amazonaws.com',
-        'PORT': '5432'                                           #BASE_DIR / 'db.sqlite3',
+        'NAME':  os.getenv("DATABASE"),
+        'USER': os.getenv("USER"),
+        'PASSWORD': os.getenv("PASSWORD"),
+        'HOST': os.getenv("HOST"),
+        'PORT': os.getenv("PORT")                                        #BASE_DIR / 'db.sqlite3',
     }
 }
 
