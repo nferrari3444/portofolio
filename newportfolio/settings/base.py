@@ -88,7 +88,7 @@ DATABASES = {
     'default': dj_database_url.config(
         default=os.getenv('DATABASE_URL'),
         conn_max_age=600, # Optional: enables connection pooling
-        ssl_mode='require', # Supabase requires SSL
+        ssl_require=True, # Supabase requires SSL
     )
 }
 
