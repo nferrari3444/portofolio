@@ -85,12 +85,13 @@ WSGI_APPLICATION = 'newportfolio.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
-        conn_max_age=600, # Optional: enables connection pooling
-        ssl_require=True, # Supabase requires SSL
-    )
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql' ,
 }
+}
+
+DATABASES['default'].update(dj_database_url.config(conn_max_age=500, ssl_require=True))
+
 
 # DATABASES = {
 #     'default': {
