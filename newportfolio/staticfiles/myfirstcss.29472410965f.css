@@ -1,0 +1,163 @@
+/* @import url('https://fonts.googleapis.com/css?family=Comic-Sans-MS'); */
+
+/* img {
+
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
+
+
+nav .navbar-nav li a {
+    color: white !important;
+    font-size: 1.5rem;
+}
+
+nav .navbar-nav li a:hover {
+    background-color: gray;
+}
+
+
+footer {
+    height: 50px;
+    width: 100%;
+}
+
+.icon-position {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.font-type {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color:darkslategrey
+}
+
+
+.img-size {
+    width: 400px;
+    height: 300px;
+}
+
+.navbar-brand {
+    font-family: "MS Gothic";
+    font-size: 2rem;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 2rem;
+}
+
+.card {
+    transition: .5s;
+ }
+ 
+ /* .card {
+    
+ } */
+ 
+ .card:hover {
+     transform: translateY(-10px);
+ }
+ 
+ 
+.icon-text {
+    font-size: 0.8rem;
+    color: white;
+    display: inline;
+    width:100%;
+    margin-top: 2rem;
+     margin-left: 1rem;  
+    vertical-align: middle; 
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+.fa-2xl {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    }
+
+
+.text-center {
+        margin-bottom: 0rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .icon-text {
+        font-size: 0.7rem;
+        color: white;
+        display: inline;
+        width: 50%;
+        margin-top: 0rem;
+         margin-left: 0.5rem;  
+        vertical-align: middle; 
+        
+    }
+
+    .fa-2xl {
+    
+    font-size: 1rem;
+    margin-left: 1rem;
+    }   
+
+    footer {
+        height: 100px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .icon-text {
+        font-size: 0.6rem;
+        color: white;
+        display: inline;
+        width: 50%;
+        margin-top: 0rem;
+         margin-left: 0.5rem;  
+        vertical-align: middle; 
+        
+    }
+
+    .fa-2xl {
+    
+    font-size: 1rem;
+    margin-left: 1rem;
+    }
+    
+    footer {
+        height: 100px;
+    }
+}
+
+
+
+.fa-linkedin .fa-envelope {
+    font-size: 80px;
+    color: blue;
+    fill:blue;
+}
+
+
+.letter {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+/* .ddd {
+    font-size:30px;
+     vertical-align:middle;
+} */
+
+/* .footer a i {
+    text-decoration: none;
+    color: inherit;
+} */
+
+/* a {
+    color: inherit;
+} */

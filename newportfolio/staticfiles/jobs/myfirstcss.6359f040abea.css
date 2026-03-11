@@ -1,0 +1,40 @@
+/* body {
+    /* background-color: blue ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; */
+ 
+
+nav .navbar-nav li a {
+    color: white !important;
+    font-size: 1.5rem;
+}
+/* img {
+
+    width: 100px;
+    height: 100px;
+} */
+
+.container {
+
+    margin-left: 10rem;
+}
+
+footer {
+    height: 100px;
+}
+
+i {
+    margin-right: 10px;
+    color: violet;
+}
+
+.letter {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 3rem;
+}
+/* footer a i {
+    margin-right: 10px;
+   
+    text-decoration: none;
+} */
+

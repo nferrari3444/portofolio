@@ -3,10 +3,12 @@ boto3==1.23.10
 botocore==1.26.10
 Django==3.2.16
 django-storages==1.12.3
-dj-database-url
+dj-database-url<2.0
 gunicorn==20.1.0
+whitenoise==6.4.0
 jmespath==0.10.0
-dotenv
+dotenv==0.19.2
+python-dotenv==0.19.2
 Pillow==8.4.0
 psycopg2-binary==2.9.5
 python-dateutil==2.8.2

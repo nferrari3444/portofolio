@@ -36,13 +36,12 @@ INSTALLED_APPS = [
 
 AWS_STORAGE_BUCKET_NAME= 'django-portfolio-nicolas'
 AWS_S3_REGION_NAME = 'us-east-1'
-AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID"),
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY= os.getenv("AWS_SECRET_ACCESS_KEY")
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_DEFAULT_ACL= None
 
-STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
@@ -51,6 +50,7 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -93,16 +93,7 @@ DATABASES = {
 DATABASES['default'].update(dj_database_url.config(conn_max_age=500, ssl_require=True))
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE':  'django.db.backends.postgresql' ,#  'django.db.backends.sqlite3',
-#         'NAME':  os.getenv("DATABASE"),
-#         'USER': os.getenv("USER"),
-#         'PASSWORD': os.getenv("PASSWORD"),
-#         'HOST': os.getenv("HOST"),
-#         'PORT': os.getenv("PORT")                                        #BASE_DIR / 'db.sqlite3',
-#     }
-# }
+
 
 
 # DATABASES = {
@@ -154,7 +145,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/cssstatic/' #os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR
