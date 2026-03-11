@@ -84,28 +84,13 @@ WSGI_APPLICATION = 'newportfolio.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.postgresql' ,
-}
-}
-
-DATABASES['default'].update(dj_database_url.config(conn_max_age=500, ssl_require=True))
-
-
-
-
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE':  'django.db.backends.postgresql' ,#  'django.db.backends.sqlite3',
-#         'NAME':  'portfoliodb',
-#         'USER': 'postgres',
-#         'PASSWORD': 'alfabeta1984',
-#         'HOST': 'localhost',
-#         'PORT': '5432'                                           #BASE_DIR / 'db.sqlite3',
-#     }
+#      'default': {
+#          'ENGINE': 'django.db.backends.postgresql' ,
 # }
+# }
+
+# DATABASES['default'].update(dj_database_url.config(conn_max_age=500, ssl_require=True))
 
 
 # Password validation
